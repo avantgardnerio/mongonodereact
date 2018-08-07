@@ -9,6 +9,9 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get install -y nodejs
 RUN npm install -g yarn
 
+# mongodb
+RUN apt-get install -y mongodb
+
 CMD cd /workspace && \
     yarn install && \
     CI=true yarn test
