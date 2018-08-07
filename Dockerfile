@@ -12,6 +12,8 @@ RUN npm install -g yarn
 # mongodb
 RUN apt-get install -y mongodb
 
-CMD cd /workspace && \
+CMD service mongodb start && \
+    cd /workspace && \
     yarn install && \
+    yarn build && \
     CI=true yarn test
