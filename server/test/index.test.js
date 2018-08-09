@@ -24,6 +24,6 @@ describe('The app', () => {
             .expect(200);
 
         // assert
-        expect(response.body).to.deep.equal(expected);
+        expect(response.body).to.deep.equal({ givenName: 'Alan', familyName: 'Turing'});
     });
 });
