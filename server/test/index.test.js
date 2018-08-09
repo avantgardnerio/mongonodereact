@@ -14,7 +14,7 @@ describe('The app', () => {
     it('should load users', async () => {
         // setup
         await db.get('users').remove({});
-        await db.get('users').insert({ givenName: 'Alan', familyName: 'Turing'});
+        await db.get('users').insert({ givenName: 'Alan2', familyName: 'Turing'});
         const expected = JSON.parse(JSON.stringify(await db.get('users').find({})));
 
         // exercise
