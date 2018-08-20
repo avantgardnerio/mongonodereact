@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => res.send('Hello World!'));
 
 app.get('/api/users', async (req, res) => {
-    const users = await db.get('users').find({});
+    const users = [];//await db.get('users').find({});
     res.json(users);
 });
 
